@@ -192,7 +192,7 @@ zig-out/
 
 - [Zig Documentation](https://ziglang.org/documentation/master/)
 - [SDL2 Documentation](https://wiki.libsdl.org/wiki/index)
-- [Zig Learning Resources](https://github.com/zigenv/awesome-zig)
+- [Zig Learning Resources](https://github.com/zigcc/awesome-zig)
 - [Zig Vector Operations](https://ziglang.org/documentation/master/#Vectors)
 
 ## Contributing
