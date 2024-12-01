@@ -18,6 +18,20 @@ pub fn build(b: *std.Build) void {
     const basic_step = b.step("basic", "Run the basic example");
     basic_step.dependOn(&run_basic.step);
 
+    // Vector exemple
+    const vector_exe = b.addExecutable(.{
+        .name = "vector",
+        .root_source_file = .{ .cwd_relative = "src/vector.zig" },
+        .target = target,
+        .optimize = optimize,
+    });
+    b.installArtifact(vector_exe);
+
+    const run_vector = b.addRunArtifact(vector_exe);
+    run_vector.step.dependOn(b.getInstallStep());
+    const vector_step = b.step("vector", "Run the vector example");
+    vector_step.dependOn(&run_vector.step);
+
     // GUI example
     const gui_exe = b.addExecutable(.{
         .name = "gui",

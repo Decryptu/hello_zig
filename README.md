@@ -1,9 +1,10 @@
 # Zig Examples
 
-This project contains two examples demonstrating different aspects of the Zig programming language:
+This project contains three examples demonstrating different aspects of the Zig programming language:
 
 1. A basic command-line program showcasing fundamental Zig features
 2. A simple GUI application using SDL2
+3. A vector operations example with interactive visualization
 
 ## Prerequisites
 
@@ -23,10 +24,11 @@ brew install sdl2
 
 ## Building and Running
 
-The project includes two examples that can be built and run separately. After building, the executables can be found in the `zig-out/bin/` directory:
+The project includes three examples that can be built and run separately. After building, the executables can be found in the `zig-out/bin/` directory:
 
 - `zig-out/bin/basic` - The basic command-line example
 - `zig-out/bin/gui` - The GUI application
+- `zig-out/bin/vector` - The vector operations example
 
 ### Basic Example
 
@@ -70,6 +72,26 @@ zig build
 zig build run-gui
 ```
 
+### Vector Example
+
+Demonstrates Zig's SIMD vector operations with an interactive visualization:
+
+- Vector arithmetic operations
+- SIMD instructions usage
+- Interactive web visualization
+- Real-time computation
+
+```bash
+# Build all targets
+zig build
+
+# Run the vector example directly
+./zig-out/bin/vector
+
+# Or use zig build command
+zig build vector
+```
+
 ### GUI Controls
 
 - Arrow keys: Move the red square
@@ -86,7 +108,8 @@ zig build run-gui
 ├── build.zig        # Build configuration
 ├── src/
 │   ├── basic.zig   # Basic Zig example
-│   └── gui.zig     # SDL2 GUI example
+│   ├── gui.zig     # SDL2 GUI example
+│   └── vector.zig  # Vector operations example
 └── .vscode/
     └── settings.json
 ```
@@ -98,8 +121,9 @@ After building, the project generates the following executables:
 ```t
 zig-out/
 └── bin/
-    ├── basic       # Basic command-line example executable
-    └── gui         # GUI application executable
+    ├── basic       # Basic command-line example executable 
+    ├── gui         # GUI application executable
+    └── vector      # Vector operations executable
 ```
 
 ## Features Demonstrated
@@ -121,11 +145,22 @@ zig-out/
 - Resource management with `defer`
 - Game loop pattern
 
+### Vector Example (vector.zig)
+
+- SIMD vector operations
+- Interactive visualization
+- Real-time computation
+- Vector arithmetic
+- Web component integration
+- User input handling
+- Dynamic result visualization
+
 ## Learning Resources
 
 - [Zig Documentation](https://ziglang.org/documentation/master/)
 - [SDL2 Documentation](https://wiki.libsdl.org/wiki/index)
 - [Zig Learning Resources](https://github.com/zigenv/awesome-zig)
+- [Zig Vector Operations](https://ziglang.org/documentation/master/#Vectors)
 
 ## Contributing
 
