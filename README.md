@@ -22,7 +22,9 @@ brew install sdl2
 
 ## Building and Running
 
-The project includes two examples that can be built and run separately:
+The project includes two examples that can be built and run separately. After building, the executables can be found in the `zig-out/bin/` directory:
+- `zig-out/bin/basic` - The basic command-line example
+- `zig-out/bin/gui` - The GUI application
 
 ### Basic Example
 Demonstrates fundamental Zig features including:
@@ -33,7 +35,13 @@ Demonstrates fundamental Zig features including:
 - Basic types
 
 ```bash
-# Build and run the basic example
+# Build all targets
+zig build
+
+# Run the basic example directly
+./zig-out/bin/basic
+
+# Or use zig build command
 zig build run-basic
 ```
 
@@ -46,7 +54,13 @@ Shows how to create a simple GUI application using SDL2:
 - Game loop implementation
 
 ```bash
-# Build and run the GUI example
+# Build all targets
+zig build
+
+# Run the GUI example directly
+./zig-out/bin/gui
+
+# Or use zig build command
 zig build run-gui
 ```
 
@@ -68,6 +82,17 @@ zig build run-gui
 │   └── gui.zig     # SDL2 GUI example
 └── .vscode/
     └── settings.json
+```
+
+## Build Output
+
+After building, the project generates the following executables:
+
+```
+zig-out/
+└── bin/
+    ├── basic       # Basic command-line example executable
+    └── gui         # GUI application executable
 ```
 
 ## Features Demonstrated
