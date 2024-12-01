@@ -1,10 +1,11 @@
 # Zig Examples
 
-This project contains three examples demonstrating different aspects of the Zig programming language:
+This project contains four examples demonstrating different aspects of the Zig programming language:
 
 1. A basic command-line program showcasing fundamental Zig features
 2. A simple GUI application using SDL2
 3. A vector operations example with interactive visualization
+4. A matrix operations example using comptime features
 
 ## Prerequisites
 
@@ -24,11 +25,12 @@ brew install sdl2
 
 ## Building and Running
 
-The project includes three examples that can be built and run separately. After building, the executables can be found in the `zig-out/bin/` directory:
+The project includes four examples that can be built and run separately. After building, the executables can be found in the `zig-out/bin/` directory:
 
 - `zig-out/bin/basic` - The basic command-line example
 - `zig-out/bin/gui` - The GUI application
 - `zig-out/bin/vector` - The vector operations example
+- `zig-out/bin/matrix` - The matrix operations example
 
 ### Basic Example
 
@@ -92,6 +94,27 @@ zig build
 zig build vector
 ```
 
+### Matrix Example
+
+Showcases advanced Zig features using matrix operations:
+
+- Generic programming with comptime
+- Compile-time error checking
+- Struct methods
+- Array operations
+- Formatted printing
+
+```bash
+# Build all targets
+zig build
+
+# Run the matrix example directly
+./zig-out/bin/matrix
+
+# Or use zig build command
+zig build matrix
+```
+
 ### GUI Controls
 
 - Arrow keys: Move the red square
@@ -109,7 +132,8 @@ zig build vector
 ├── src/
 │   ├── basic.zig   # Basic Zig example
 │   ├── gui.zig     # SDL2 GUI example
-│   └── vector.zig  # Vector operations example
+│   ├── vector.zig  # Vector operations example
+│   └── matrix.zig  # Matrix operations example
 └── .vscode/
     └── settings.json
 ```
@@ -123,7 +147,8 @@ zig-out/
 └── bin/
     ├── basic       # Basic command-line example executable 
     ├── gui         # GUI application executable
-    └── vector      # Vector operations executable
+    ├── vector      # Vector operations executable
+    └── matrix      # Matrix operations executable
 ```
 
 ## Features Demonstrated
@@ -154,6 +179,14 @@ zig-out/
 - Web component integration
 - User input handling
 - Dynamic result visualization
+
+### Matrix Example (matrix.zig)
+
+- Generic programming using comptime
+- Error checking at compile time
+- Struct methods
+- Array operations
+- Formatted printing
 
 ## Learning Resources
 
