@@ -1,0 +1,10 @@
+{
+    "zigLanguageServer.path": "zls",
+    "zig.buildFilePath": "./build.zig",
+    "zig.zls.enableInlayHints": true,
+    "zig.zls.semanticTokens": "full",
+    "zig.zls.include_dirs": [
+        "/opt/homebrew/include",
+        "/opt/homebrew/include/SDL2"
+    ]
+}

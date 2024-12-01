@@ -1,6 +1,6 @@
 const std = @import("std");
 const c = @cImport({
-    @cInclude("<SDL2/SDL.h>"); // Added angle brackets
+    @cInclude("SDL.h");
 });
 
 pub fn main() !void {

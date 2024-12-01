@@ -5,17 +5,18 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     const exe = b.addExecutable(.{
-        .name = "gui",
-        .root_source_file = .{ .cwd_relative = "gui.zig" }, // Changed from .path
+        .name = "hello_zig",
+        .root_source_file = .{ .cwd_relative = "src/main.zig" },
         .target = target,
         .optimize = optimize,
     });
 
-    // Add SDL2 package with more specific paths for macOS
+    // SDL2 configuration
     exe.linkSystemLibrary("SDL2");
-    // Add include paths for M1 Mac
+    exe.addIncludePath(.{ .cwd_relative = "/opt/homebrew/include/SDL2" });
     exe.addIncludePath(.{ .cwd_relative = "/opt/homebrew/include" });
     exe.addLibraryPath(.{ .cwd_relative = "/opt/homebrew/lib" });
+    exe.linkLibC();
 
     b.installArtifact(exe);
 
