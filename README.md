@@ -1,6 +1,7 @@
 # Zig Examples
 
 This project contains two examples demonstrating different aspects of the Zig programming language:
+
 1. A basic command-line program showcasing fundamental Zig features
 2. A simple GUI application using SDL2
 
@@ -23,11 +24,14 @@ brew install sdl2
 ## Building and Running
 
 The project includes two examples that can be built and run separately. After building, the executables can be found in the `zig-out/bin/` directory:
+
 - `zig-out/bin/basic` - The basic command-line example
 - `zig-out/bin/gui` - The GUI application
 
 ### Basic Example
+
 Demonstrates fundamental Zig features including:
+
 - Functions
 - Structs with methods
 - Error handling
@@ -46,7 +50,9 @@ zig build run-basic
 ```
 
 ### GUI Example
+
 Shows how to create a simple GUI application using SDL2:
+
 - Window creation
 - Event handling
 - Basic graphics rendering
@@ -65,13 +71,14 @@ zig build run-gui
 ```
 
 ### GUI Controls
+
 - Arrow keys: Move the red square
 - Escape: Exit the program
 - Window close button: Exit the program
 
 ## Project Structure
 
-```
+```t
 .
 ├── .gitignore
 ├── LICENSE
@@ -88,7 +95,7 @@ zig build run-gui
 
 After building, the project generates the following executables:
 
-```
+```t
 zig-out/
 └── bin/
     ├── basic       # Basic command-line example executable
@@ -98,6 +105,7 @@ zig-out/
 ## Features Demonstrated
 
 ### Basic Example (basic.zig)
+
 - Function definitions
 - Custom types (structs)
 - String formatting and printing
@@ -105,6 +113,7 @@ zig-out/
 - Basic arithmetic
 
 ### GUI Example (gui.zig)
+
 - SDL2 integration
 - Window management
 - Input handling
@@ -121,6 +130,7 @@ zig-out/
 ## Contributing
 
 Feel free to:
+
 - Report issues
 - Suggest improvements
 - Submit pull requests
